@@ -1,4 +1,4 @@
-# Floyd_Warshall_Algorithm
+# Floyd Warshall Algorithm
 
 This repository contains an implementation of Floyd's algorithm rewritten to use recursion. It includes unit tests for each function and performance tests to compare this recursive version against the imperative version.
 
