@@ -21,8 +21,8 @@ for k in range(V): # rows
         # print(k, i)
         # Pick all vertices as destination for the above picked source
         for j in range(V): # values
-            print(k, i, j)
-            print(row[i][j])
+            #print(k, i, j)
+            print(rows[i][j])
             rows[i][j] = min(rows[i][j],
                              rows[i][k] + rows[k][j]
                              )
