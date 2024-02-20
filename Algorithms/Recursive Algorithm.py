@@ -23,24 +23,21 @@ for k in range(V): # rows
         for j in range(V): # values
             # print(k, i, j)
             # print(rows[i][j])
-            print(f'list{i} and value{j}: ', rows[i][j], f'list{i} and value{k} ', rows[i][k], f'row{k} and value{j}: ', rows[k][j], f'add list{i} and value{k} to row{k} and value{j}: ', rows[i][k] + rows[k][j])
+            # print(f'list{i} and value{j}: ', rows[i][j], f'list{i} and value{k} ', rows[i][k], f'value{k} and value{j}: ', rows[k][j], f'add list{i} and value{k} to value{k} and value{j}: ', rows[i][k] + rows[k][j])
             rows[i][j] = min(rows[i][j],
                              rows[i][k] + rows[k][j]
                              )
+            print_solution = pd.DataFrame(rows)
+            print(print_solution)
 
-#
-# # A utility function to print the solution
-# def printsolution(dist):
-#     print("Following matrix shows the shortest distances\
-# between every pair of vertices")
-#     for i in range(V):
-#         for j in range(V):
-#             if (dist[i][j] == INF):
-#                 print("%7s" % ("INF"), end=" ")
-#             else:
-#                 print("%7d\t" % (dist[i][j]), end=' ')
-#             if j == V - 1:
-#                 print()
+for i in range(V):
+    for j in range(V):
+        if (rows[i][j] == INF):
+            print("%7s" % ("INF"), end=" ")
+        else:
+            print("%7d\t" % (rows[i][j]), end=' ')
+            if j == V - 1:
+                print()
 
 
 # Driver's code
