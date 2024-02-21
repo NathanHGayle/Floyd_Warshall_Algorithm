@@ -14,32 +14,36 @@ matrix = pd.DataFrame(graph) # visually more satisfying in dataframe.
 
 rows = list(map(lambda i: list(map(lambda j: j, i)), graph))
 
-print(rows)
-for k in range(V): # rows
-    # pick all vertices as source one by one
-    for i in range(V): # columns
-        # print(k, i)
-        # Pick all vertices as destination for the above picked source
-        for j in range(V): # values
-            print(rows[i][j], rows[i][k], rows[k][j])
-            # print(rows[i][j])
-            # print(f'list{i} and value{j}: ', rows[i][j], f'list{i} and value{k} ', rows[i][k], f'value{k} and value{j}: ', rows[k][j], f'add list{i} and value{k} to value{k} and value{j}: ', rows[i][k] + rows[k][j])
 
-            rows[i][j] = min(rows[i][j],
-                             rows[i][k] + rows[k][j]
-                             )
-            print_solution = pd.DataFrame(rows)
-            # print(print_solution)
+def recursive_test(input):
+    if input == 100:
+        return 'stop'
+    input += 1
+    print(input)
+    return recursive_test(input)
 
-for i in range(V):
-    for j in range(V):
-        if (rows[i][j] == INF):
-            print("%7s" % ("INF"), end=" ")
-        else:
-            print("%7d\t" % (rows[i][j]), end=' ')
-            if j == V - 1:
-                print()
+print(recursive_test(-1))
 
+
+
+# for k in range(V): # rows
+#     for i in range(V): # columns
+#         for j in range(V): # values
+#             print(rows[i][j], rows[i][k], rows[k][j])
+#             rows[i][j] = min(rows[i][j],
+#                              rows[i][k] + rows[k][j]
+#                              )
+#             print_solution = pd.DataFrame(rows)
+#
+# for i in range(V):
+#     for j in range(V):
+#         if (rows[i][j] == INF):
+#             print("%7s" % ("INF"), end=" ")
+#         else:
+#             print("%7d\t" % (rows[i][j]), end=' ')
+#             if j == V - 1:
+#                 print()
+#
 
 
 
