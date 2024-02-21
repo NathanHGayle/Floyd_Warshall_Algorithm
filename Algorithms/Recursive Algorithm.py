@@ -10,7 +10,7 @@ graph = [[0, 5, INF, 10],
          ]
 matrix = pd.DataFrame(graph) # visually more satisfying in dataframe.
 # matrix_two = np.array(graph)
-print(matrix)
+#print(matrix)
 
 rows = list(map(lambda i: list(map(lambda j: j, i)), graph))
 
@@ -21,14 +21,15 @@ for k in range(V): # rows
         # print(k, i)
         # Pick all vertices as destination for the above picked source
         for j in range(V): # values
-            # print(k, i, j)
+            print(rows[i][j], rows[i][k], rows[k][j])
             # print(rows[i][j])
             # print(f'list{i} and value{j}: ', rows[i][j], f'list{i} and value{k} ', rows[i][k], f'value{k} and value{j}: ', rows[k][j], f'add list{i} and value{k} to value{k} and value{j}: ', rows[i][k] + rows[k][j])
+
             rows[i][j] = min(rows[i][j],
                              rows[i][k] + rows[k][j]
                              )
             print_solution = pd.DataFrame(rows)
-            print(print_solution)
+            # print(print_solution)
 
 for i in range(V):
     for j in range(V):
@@ -38,6 +39,8 @@ for i in range(V):
             print("%7d\t" % (rows[i][j]), end=' ')
             if j == V - 1:
                 print()
+
+
 
 
 # Driver's code
