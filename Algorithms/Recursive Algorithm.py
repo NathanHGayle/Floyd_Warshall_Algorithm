@@ -18,19 +18,19 @@ rows = list(map(lambda i: list(map(lambda j: j, i)), graph))
 
 def recursive_test(input):
     # base case
-    if input < 0:
-        return 'stop'
-    # recursive case
-    print(input)
-    if input > 1:
-        for i in range(input):
+    static = input
+    if (input) > -1 and not np.nan:
+        for i in range(input+1):
             print(input, i)
         else:
             pass
+    if input < 0:
+        return 'stop'
+    # recursive case
     return recursive_test(input-1)
 
 
-print(recursive_test(4))
+print(recursive_test(3))
 
 #
 # for k in range(V): # rows

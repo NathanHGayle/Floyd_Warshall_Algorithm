@@ -53,6 +53,7 @@ def floydwarshall(graph):
             for j in range(V):
                 # If vertex k is on the shortest path from
                 # i to j, then update the value of dist[i][j]
+                print(k,i,j)
                 dist[i][j] = min(dist[i][j],
                                  dist[i][k] + dist[k][j]
                                  )
