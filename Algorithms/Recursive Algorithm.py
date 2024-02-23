@@ -43,3 +43,4 @@ for pair in pairs:
 # Printing the updated matrix after applying Floyd-Warshall algorithm
 print("Updated Matrix after applying Floyd-Warshall algorithm:")
 print(updated_matrix)
+print(pairs.count())
