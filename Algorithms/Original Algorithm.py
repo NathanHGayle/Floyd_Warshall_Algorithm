@@ -1,7 +1,7 @@
 # Python3 Program for Floyd Warshall Algorithm
 
 # Number of vertices in the graph
-V = 4
+V = 5
 
 # Define infinity as the large
 # enough value. This value will be
@@ -90,6 +90,12 @@ if __name__ == "__main__":
              [INF, INF, 0, 1],
              [INF, INF, INF, 0]
              ]
+    graph_two = [[0, 5, 7, INF, INF],
+             [5, 0, 6, INF, INF],
+             [7, 5, 0,8, INF],
+             [INF, INF, 8, 0, 2],
+             [INF, INF, INF, 2, 0]
+             ]
     # Function call
-    floydwarshall(graph)
+    floydwarshall(graph_two)
 # This code is contributed by Mythri J L
