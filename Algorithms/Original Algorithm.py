@@ -1,7 +1,7 @@
 # Python3 Program for Floyd Warshall Algorithm
 
 # Number of vertices in the graph
-V = 5
+V = 4
 
 # Define infinity as the large
 # enough value. This value will be
@@ -53,7 +53,6 @@ def floydwarshall(graph):
             for j in range(V):
                 # If vertex k is on the shortest path from
                 # i to j, then update the value of dist[i][j]
-                print(k,i,j)
                 dist[i][j] = min(dist[i][j],
                                  dist[i][k] + dist[k][j]
                                  )
@@ -90,12 +89,6 @@ if __name__ == "__main__":
              [INF, INF, 0, 1],
              [INF, INF, INF, 0]
              ]
-    graph_two = [[0, 5, 7, INF, INF],
-             [5, 0, 6, INF, INF],
-             [7, 5, 0,8, INF],
-             [INF, INF, 8, 0, 2],
-             [INF, INF, INF, 2, 0]
-             ]
     # Function call
-    floydwarshall(graph_two)
+    floydwarshall(graph)
 # This code is contributed by Mythri J L
