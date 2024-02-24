@@ -1,5 +1,5 @@
 from unittest import TestCase
-from Recursive_Algorithm import create_pairs
+from recursive_solution import create_pairs
 import numpy as np
 
 
