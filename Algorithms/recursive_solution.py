@@ -17,8 +17,9 @@ def floyd_recursive(distance):
         for start_node in range(MAX_LENGTH):
             for end_node in range(MAX_LENGTH):
                 distance[start_node][end_node] = helper(start_node, end_node, intermediate)
-
     print(distance)
+    return distance
+
 
 NO_PATH = sys.maxsize
 graph = [
