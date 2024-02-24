@@ -1,4 +1,5 @@
 from unittest import TestCase
+from recursive_solution import floyd_recursive
 import sys
 
 class Test(TestCase):
@@ -14,4 +15,4 @@ class Test(TestCase):
                    [9223372036854775807, 9223372036854775807, 9223372036854775807, 0]
                    ]
 
-        self.assertEqual(example_graph,expected_result)
+        self.assertEqual(floyd_recursive(example_graph),expected_result)
