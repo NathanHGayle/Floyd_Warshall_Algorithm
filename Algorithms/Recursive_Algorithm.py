@@ -41,6 +41,6 @@ for pair in pairs:
                     updated_matrix[loop[0]][loop[1]] = matrix[loop[0]][pair[0]] + pair[2]
 
 # Printing the updated matrix after applying Floyd-Warshall algorithm
-print("Updated Matrix after applying Floyd-Warshall algorithm:")
+print("Following matrix shows the shortest distances between every pair of vertices")
 print(updated_matrix)
 print(len(pairs))
