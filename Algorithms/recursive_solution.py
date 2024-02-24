@@ -1,5 +1,4 @@
 import sys
-
 def floyd_recursive(distance):
     MAX_LENGTH = len(distance)
 
