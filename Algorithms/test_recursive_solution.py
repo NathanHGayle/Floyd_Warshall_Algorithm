@@ -26,5 +26,5 @@ class Test(TestCase):
             distance[start_node][end_node],
             distance[start_node][intermediate] + distance[intermediate][end_node]
         )
-        expected_distance = floyd_recursive(distance).helper(start_node, end_node, intermediate, distance)
-        self.assertEqual(floyd_recursive(distance).helper(start_node, end_node, intermediate))
+        # expected_distance = floyd_recursive(distance)[start_node][end_node]
+        self.assertEqual(floyd_recursive(distance)[start_node][end_node],expected_distance)
