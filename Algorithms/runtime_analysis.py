@@ -23,8 +23,10 @@ def floyd_runtime(graph, graph_name):
     floyd(graph)
     # END
     script_end_time = datetime.now()
-    runtime = script_end_time - script_start_time
-    results_dict = {'graph': graph_name, 'floyd_main_runtime': runtime}
+    runtime = (script_end_time - script_start_time)
+    # adding microseconds for more granularity
+    runtime_microseconds = runtime.total_seconds() * 10 ** 6  # Convert seconds to microseconds
+    results_dict = {'graph': graph_name, 'floyd_main_runtime': runtime_microseconds}
     df = pd.DataFrame([results_dict])
     return df
 
@@ -40,7 +42,9 @@ def floyd_recursive_runtime(graph, graph_name):
     # END
     script_end_time = datetime.now()
     runtime = script_end_time - script_start_time
-    results_dict_rec = {'graph': graph_name, 'floyd_recursive_main_runtime': runtime}
+    # adding microseconds for more granularity
+    runtime_microseconds = runtime.total_seconds() * 10 ** 6  # Convert seconds to microseconds
+    results_dict_rec = {'graph': graph_name, 'floyd_recursive_main_runtime': runtime_microseconds}
     df = pd.DataFrame([results_dict_rec])
     return df
 

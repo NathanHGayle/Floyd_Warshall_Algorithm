@@ -1,6 +1,6 @@
 ,graph,floyd_main_runtime,floyd_recursive_main_runtime,null_hypothesis,hypothesis_one,hypothesis_two
-0,one,0 days,0 days,False,False,False
-1,two,0 days,0 days,False,False,False
-2,three,0 days,0 days,False,False,False
-3,four,0 days,0 days,False,False,False
-4,five,0 days,0 days,False,False,False
+0,one,0.0,0.0,False,False,False
+1,two,0.0,0.0,False,False,False
+2,three,0.0,0.0,False,False,False
+3,four,997.0,0.0,True,True,False
+4,five,0.0,0.0,False,False,False
