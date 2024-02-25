@@ -33,7 +33,7 @@ def main():
         [no_path, no_path, 0, 2],
         [no_path, no_path, no_path, 0]
     ]
-    print(floyd_recursive(graph))
+
 
 
 if __name__ == "__main__":
