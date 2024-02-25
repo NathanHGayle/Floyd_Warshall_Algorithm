@@ -82,9 +82,12 @@ def performance_test_df():
     recursion = floyd_rec_perf_test()
     performance_df = original.merge(recursion, 'left', left_on='graph', right_on='graph')
     # establish hypothesis that the recursive function will have a lower runtime then the original function
-    performance_df['null_hypothesis'] = performance_df['floyd_recursive_main_runtime'] != performance_df['floyd_main_runtime']
-    performance_df['hypothesis_one'] = performance_df['floyd_recursive_main_runtime'] < performance_df['floyd_main_runtime']
-    performance_df['hypothesis_two'] = performance_df['floyd_recursive_main_runtime'] > performance_df['floyd_main_runtime']
+    performance_df['null_hypothesis'] = \
+        performance_df['floyd_recursive_main_runtime'] != performance_df['floyd_main_runtime']
+    performance_df['hypothesis_one'] = \
+        performance_df['floyd_recursive_main_runtime'] < performance_df['floyd_main_runtime']
+    performance_df['hypothesis_two'] = \
+        performance_df['floyd_recursive_main_runtime'] > performance_df['floyd_main_runtime']
     return performance_df
 
 
