@@ -12,7 +12,7 @@ Unit tests have been implemented for each function in the algorithm to ensure co
 
 ## Performance Tests
 
-Performance tests have been conducted to compare the efficiency of the recursive version with the imperative version. By measuring Time Complexity, Memory Consumption, and Empirical Tests comparing the differences in performance between the two approaches.
+Performance tests have been conducted to compare the runtime of the recursive function with the imperative function. By measuring runtime of these functionsI was able to compare the results in microseconds to accept my Null Hypothesis.
 
 ## Documentation
 
@@ -20,6 +20,5 @@ The documentation provided outlines the approach and methodology used in rewriti
 
 ### Null Hypothesis
 
-The null hypothesis states that there is no significant difference between the recursive algorithm and the imperative algorithm. This hypothesis will be tested and evaluated through empirical data gathered from performance testing.
+There is no difference between the Imperative Function and the Recursive Func-tion.
 
-All source code provided publically along with supporting documentation.
