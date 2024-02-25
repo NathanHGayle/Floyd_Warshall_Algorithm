@@ -2,6 +2,9 @@ import sys
 
 
 def floyd_recursive(distance):
+    """
+    A recursive implementation of Floyd's algorithm
+    """
     max_length = len(distance)
 
     def helper(start_node, end_node, intermediate):
