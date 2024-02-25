@@ -88,8 +88,6 @@ def performance_test_df():
         performance_df['floyd_recursive_main_runtime'] < performance_df['floyd_main_runtime']
     performance_df['hypothesis_two'] = \
         performance_df['floyd_recursive_main_runtime'] > performance_df['floyd_main_runtime']
-    performance_df['hypothesis_three'] = \
-        performance_df['floyd_main_runtime'] - performance_df['floyd_recursive_main_runtime']
     return performance_df
 
 
