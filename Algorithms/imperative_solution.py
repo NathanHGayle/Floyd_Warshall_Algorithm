@@ -23,7 +23,7 @@ def floyd(distance):
         distance[start_node][end_node] = min(distance[start_node][end_node],
                                              distance[start_node][intermediate] + distance[intermediate][end_node])
         # Any value that have sys.maxsize has no path
-    print(distance)
+    return distance
 
 
 floyd(graph)
