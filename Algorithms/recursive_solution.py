@@ -1,4 +1,5 @@
 import sys
+import itertools
 
 
 def floyd_recursive(distance):
@@ -18,10 +19,9 @@ def floyd_recursive(distance):
         )
 
     # Recursive call
-    for intermediate in range(max_length):
-        for start_node in range(max_length):
-            for end_node in range(max_length):
-                distance[start_node][end_node] = helper(start_node, end_node, intermediate)
+    for intermediate, start_node, end_node in itertools.product(range(max_length), range(max_length),
+                                                                range(max_length)):
+        distance[start_node][end_node] = helper(start_node, end_node, intermediate)
     return distance
 
 
@@ -33,7 +33,7 @@ def main():
         [no_path, no_path, 0, 2],
         [no_path, no_path, no_path, 0]
     ]
-    floyd_recursive(graph)
+    print(floyd_recursive(graph))
 
 
 if __name__ == "__main__":

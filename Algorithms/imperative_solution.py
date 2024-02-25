@@ -27,4 +27,4 @@ def floyd(distance):
     return distance
 
 
-floyd(graph)
+print(floyd(graph))
